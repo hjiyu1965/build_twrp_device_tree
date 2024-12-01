@@ -28,7 +28,8 @@ jobs:
         with:
           python-version: ${{ github.event.inputs.PY }}
           cache: 'pip'
-          
+       - name:准备安装 cpio
+          run:sudo apt install cpio
       - name: 准备twrpdtgen
         run: pip3 install -r requirements.txt
         
